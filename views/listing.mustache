@@ -31,17 +31,26 @@
           </tr>
           <tr>
             <td class="skills">Skills</td>
-            {{#skills}}
-            <td>{{.}}, </td>
-          {{/skills}}
+            <td>
+              <ul>
+                {{#skills}}
+                <li>{{.}}, </li>
+              {{/skills}}
+              </ul>
+            </td>
           </tr>
           {{/university}}
           {{^university}}
             <tr>
               <td class="skills">Skills</td>
-              {{#skills}}
-              <td>{{.}}, </td>
-            {{/skills}}
+              <td>
+                <ul>
+                  {{#skills}}
+                  <li>{{.}}, </li>
+                {{/skills}}
+                </ul>
+              </td>
+
             </tr>
           {{/university}}
         </table>
