@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User Directory</title>
+    <link rel="stylesheet" href="../public/style.css">
+  </head>
+  <body>
+    <h1 class="main_title">User Directory</h1>
+    <div class="main_container">
+      {{#users}}
+        <a class="boxes" href="/listing/{{id}}">
+          <img src={{avatar}}>
+          <h3 class="name">{{name}}</h3>
+          {{#job}}
+            <h4>{{job}}</h4>
+            <h4>{{company}}</h4>
+          {{/job}}
+          {{^job}}
+            <h4 class="needsJob">Available for Hire</h4>
+          {{/job}}
+        </a>
+      {{/users}}
+    </div>
+  </body>
+</html>
