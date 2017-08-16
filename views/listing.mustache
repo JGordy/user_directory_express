@@ -24,6 +24,7 @@
       </div>
       <div class="skills_box">
         <table>
+          {{#university}}
           <tr>
             <td class="education">Education</td>
             <td>{{university}}</td>
@@ -34,6 +35,15 @@
             <td>{{.}}, </td>
           {{/skills}}
           </tr>
+          {{/university}}
+          {{^university}}
+            <tr>
+              <td class="skills">Skills</td>
+              {{#skills}}
+              <td>{{.}}, </td>
+            {{/skills}}
+            </tr>
+          {{/university}}
         </table>
       </div>
     </div>
