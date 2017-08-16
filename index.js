@@ -14,13 +14,11 @@ app.set('view engine', 'mustache');
 app.get('/', function (req, res) {
   // TODO write your code here
   res.render("index", data);
-  console.log(req.params.id);
 })
 
 app.get('/listing/:id', function (req, res) {
   // TODO write your code here
-  console.log(req.params.id);
-  res.render("listing", req.params.id);
+  res.render("listing", data.users[req.params.id -1]);
 })
 
 app.listen(3000, function () {
